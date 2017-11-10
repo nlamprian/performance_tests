@@ -52,7 +52,6 @@ void Publisher::start() {
     freq_msg.frequency = frequency;
     freq_publisher_.publish(freq_msg);
 
-    ros::spinOnce();
     ros::Duration duration = desired_period_ - (ros::Time::now() - time);
     if (duration > ros::Duration(0)) duration.sleep();
     // loop_rate_.sleep();
