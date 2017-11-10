@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find performance_tests)/launch/performance_tests_base.launch" />
+    <node name="publisher" pkg="performance_tests" type="publisher_py.py" />
+    <node name="subscriber" pkg="performance_tests" type="subscriber_py.py" />
+</launch>
